@@ -1,0 +1,45 @@
+.loading{
+   display: flex;
+    justify-content: center;
+   
+}
+.loading::after{
+
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 10px solid lightgrey;
+    border-left-color: blue;
+    border-right-color: blue;
+    border-radius: 50%;
+    animation: loading 0.5s linear infinite;
+}
+@keyframes loading {
+    to{
+        transform: rotate(1turn);
+    }
+}
+
+.loading2{
+    position: relative;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.loading2::after{
+    content: "";
+    width: 50px;
+    opacity: 0.3;
+    height: 50px;
+    background-color: grey;
+    border-radius: 50%;
+    animation: loading2 1s linear alternate infinite;
+}   
+
+@keyframes loading2 {
+    to{
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
